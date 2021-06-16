@@ -1,11 +1,12 @@
 import './App.css';
 //import Login from './components/Login'
-import Tasks from './components/Tasks';
+import Register from './components/Register';
+// import Tasks from './components/Tasks';
 
 
 function App() {
   return (
-    <Tasks />
+    <Register />
   );
 }
 
