@@ -1,0 +1,23 @@
+.p-3 {
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+    width: 500px;
+}
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+input {
+    width: 330px;
+}
+button {
+    background-color: crimson;
+} 
+.btn-block {
+    margin-left: 140px;
+}
+.form-div {
+    /* margin-left: 100px; */
+    width: 500px;
+}
