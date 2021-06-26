@@ -16,10 +16,10 @@ class Login extends Component {
 	    this.setState(e.target.value)
 	}
 
-	submitHandler() {
+	submitHandler = (e) => {
 	    e.preventDefault()
 	    alert(this.state)
-	    axios.post('https://user-manager-')
+	    axios.post('https://user-manager-three.vercel.app/api/')
 	}
     }
  

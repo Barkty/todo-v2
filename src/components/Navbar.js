@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Navbar = () => {
-    return()
+    return <ul>
+        <li>Home</li>
+        <li>Login</li>
+        <li>Register</li>
+    </ul>
 }
 
 export default Navbar

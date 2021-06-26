@@ -19,12 +19,6 @@ class Register extends Component{
     
     //const [userId, setUserId] = useState('')
     // const [username, setUserName] = useState('')
-<<<<<<< HEAD
-   // const [email, setEmail] = useState('')
-    //const [password, setPassword] = useState('')
-    //const [confirm, setConfirm] = useState('')
-
-=======
     //const [email, setEmail] = useState('')
     //const [password, setPassword] = useState('')
     //const [confirm, setConfirm] = useState('')
@@ -32,7 +26,7 @@ class Register extends Component{
     changeHandler = e => {
 	this.setState({[e.target.name]: e.target.value})
     }
->>>>>>> 4ed3d2bd6bca17645156735f504a8b8f6d754e0d
+
     submitHandler = e => {
         e.preventDefault()
         alert(this.state)
@@ -73,8 +67,8 @@ class Register extends Component{
             <button className="btn btn-lg btn-success btn-block mt-3" type="submit" onClick={this.registerForm}>Register</button>
             <p>Have an account? <a href='./Login.js'>Login</a></p>
          </form>
-     </div>
- );   
+    </div>
+ )   
 }
 
 export default Register
