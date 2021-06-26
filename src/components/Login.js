@@ -1,40 +1,38 @@
-import React, {Component} from 'react'
+import {useState} from 'react'
+import { Link} from 'react-router-dom';
 import axios from 'axios'
 import './styles.css'
 
 
-class Login extends Component {
-    constructor(props){
-	super(props)
+function Login () {
 
-	this.state = {
-	    name: '',
-	    password: ''
-	}
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
 
-	changeHandler = e => {
-	    this.setState(e.target.value)
-	}
-
-	submitHandler() {
-	    e.preventDefault()
-	    alert(this.state)
-	    axios.post('https://user-manager-')
-	}
-    }
- 
+    const submitHandler = (e) => {
+	    e.preventDefault();
+	    axios.post('https://user-manager-three.vercel.app/api', {email, password})
+		.then((res) => {
+		    console.log(res.data);
+		})
+		.catch((err) => {
+		    console.log(err)
+		});
+    };
+    
     return(
      <div className='form-div mt-5'>
-         <form className='form-signin m-5' onSubmit={this.submitHandler}>
+         <form className='form-signin m-5' onSubmit={submitHandler}>
           <h1 className="h3 mb-3 text-center font-weight-normal">Login</h1>
             <label className="sr-only">Username</label>
-             <input type='email' name='name' value={this.state.name} className='form-control mb-4' placeholder='Enter email' onChange={this.changeHandler}/>
-            <label >Password</label>
-             <input type='password' className='form-control' name='password' value={this.state.password} placeholder='********' onChange={this.changeHandler}/>
+             <input type='email' name='email' value={email} className='form-control mb-4' placeholder='Enter email' onChange={(e) => {setEmail(e.target.value)}}/>
+            <label>Password</label>
+             <input type='password' className='form-control' name='password' value={password} placeholder='Enter password' onChange={(e) => {setPassword(e.target.value)}}/>
             <button className="btn btn-lg btn-success btn-block mt-3" type="submit">Login</button>
-         </form>
+	    <p>Do not have an account? <Link to='/register'>Register</Link></p>
+	</form>
      </div>
  );   
 }
 
-export default Login
+export default Login;

@@ -1,13 +1,25 @@
 import './App.css';
-//import Login from './components/Login'
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/Login'
 //import Register from './components/Register';
-import Tasks from './components/Tasks';
-import Navbar from './components/Navbar'
+//import Tasks from './components/Tasks';
 
 function App() {
-  return (
-      <Navbar />
-	  <Tasks/>
+    return (
+	<div>
+      <Router>
+	  <Switch>
+	  <Route path='/login'>
+	    <Login />
+          </Route>
+	  <Route path='/register'>
+	   <Register />
+          </Route>
+	  <Route path='/tasks'>
+	   <Tasks />
+         </Route>
+         </Switch>
+         </Router>
   );
 }
 
