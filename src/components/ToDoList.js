@@ -1,5 +1,7 @@
 import React from 'react'
 import ToDoItem from './ToDoItem'
+import './styles.css'
+
 
 const taskList = [
     {
@@ -30,8 +32,8 @@ const taskList = [
 
 const ToDoList = () => {
     return (
-        <ul>
-            {taskList.map(task => <ToDoItem key={task.id} task={task}/>)}
+        <ul className='list'>
+            {taskList.map(task => <ToDoItem key={task.id} task={task.task}/>)}
         </ul>
     )
 }

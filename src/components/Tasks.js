@@ -1,10 +1,10 @@
 import React from 'react';
 import Form from './Form';
-import ToDoList from './ToDoList'
+import ToDoList from './ToDoList' 
 
 const Tasks = () => {
     return(
-        <div>
+        <div className='mt-5'>
             <Form />
             <ToDoList />
         </div>
