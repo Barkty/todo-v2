@@ -14,26 +14,26 @@ class Register extends Component{
     
     
     
-    const [userId, setUserId] = useState('')
+    //const [userId, setUserId] = useState('')
     // const [username, setUserName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirm, setConfirm] = useState('')
+   // const [email, setEmail] = useState('')
+    //const [password, setPassword] = useState('')
+    //const [confirm, setConfirm] = useState('')
 
-    const submitHandler = e => {
+    submitHandler = e => {
         e.preventDefault()
         console.log(newUser)
     };
 
-    const registerForm = () => {
+    registerForm = () => {
         if(!(userId || password || confirm || email))  {
             alert('Please register an account')
-            return;
-        }
+            return
+        };
     }
     
-    if(confirm !== password) {
-        alert('Password doesn\'t match')
+    //if(confirm !== password) {
+        //alert('Password doesn\'t match')
     }
 
     //Concatenate the user info
