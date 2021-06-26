@@ -9,6 +9,7 @@ function Register() {
     const [password, setPassword] = useState();
     const [repeatPassword, setRepeatPassword] = useState();
 
+<<<<<<< HEAD
    const submitHandler = e => {
        e.preventDefault();
 
@@ -44,8 +45,8 @@ function Register() {
              <input type='password' className='form-control' name='confirm' value={repeatPassword} placeholder='Confirm password' onChange={(e) => {setRepeatPassword(e.target.value)}}/>
             <button className="btn btn-lg btn-success btn-block mt-3" type="submit">Register</button>
          </form>
-     </div>
- );   
+    </div>
+ )   
 }
 
 export default Register;
