@@ -9,7 +9,6 @@ function Register() {
     const [password, setPassword] = useState();
     const [repeatPassword, setRepeatPassword] = useState();
 
-<<<<<<< HEAD
    const submitHandler = e => {
        e.preventDefault();
 
